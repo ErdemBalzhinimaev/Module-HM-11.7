@@ -46,62 +46,48 @@
         <table>
             <caption class="title">Задание 1. Таблица истинности PHP</caption>
             <thead>
+            <tr>
                 <th>A</th>
                 <th>B</th>
                 <th>!A</th>
                 <th>A || B</th>
                 <th>A && B</th>
                 <th>A xor B</th>
+            </tr>
             </thead>
             <tbody>
-                <tr>
-                    <?php 
-                        $a = 0;
-                        $b = 0;
-                        echo "<td>$a</td>";
-                        echo "<td>$b</td>";
-                        echo "<td>" . !$a . "</td>";
-                        echo "<td>" . (int)($a || $b) . "</td>";
-                        echo "<td>" . (int)($a && $b) . "</td>";
-                        echo "<td>" . (int)($a xor $b) . "</td>";
-                    ?>
-                </tr>
-                <tr>
-                    <?php
-                        $a = 0;
-                        $b = 1;
-                        echo "<td>$a</td>";
-                        echo "<td>$b</td>";
-                        echo "<td>" . !$a . "</td>";
-                        echo "<td>" . (int)($a || $b) . "</td>";
-                        echo "<td>" . (int)($a && $b) . "</td>";
-                        echo "<td>" . (int)($a xor $b) . "</td>";
-                    ?>
-                </tr>
-                <tr>
-                    <?php 
-                        $a = 1;
-                        $b = 0;
-                        echo "<td>$a</td>";
-                        echo "<td>$b</td>";
-                        echo "<td>" . (int)!$a . "</td>";
-                        echo "<td>" . (int)($a || $b) . "</td>";
-                        echo "<td>" . (int)($a && $b) . "</td>";
-                        echo "<td>" . (int)($a xor $b) . "</td>";
-                    ?>
-                </tr>
-                <tr>
-                    <?php 
-                        $a = 1;
-                        $b = 1;
-                        echo "<td>$a</td>";
-                        echo "<td>$b</td>";
-                        echo "<td>" . (int)!$a . "</td>";
-                        echo "<td>" . (int)($a || $b) . "</td>";
-                        echo "<td>" . (int)($a && $b) . "</td>";
-                        echo "<td>" . (int)($a xor $b) . "</td>";
-                    ?>
-                </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td><?php var_dump(!$a0); ?></td>
+                <td><?php var_dump($a0 || $b0); ?></td>
+                <td><?php var_dump($a0 && $b0); ?></td>
+                <td><?php var_dump($a0 xor $b0); ?></td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td><?php var_dump(!$a0); ?></td>
+                <td><?php var_dump($a0 || $b1); ?></td>
+                <td><?php var_dump($a0 && $b1); ?></td>
+                <td><?php var_dump($a0 xor $b1); ?></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td><?php var_dump(!$a1); ?></td>
+                <td><?php var_dump($a1 || $b0); ?></td>
+                <td><?php var_dump($a1 && $b0); ?></td>
+                <td><?php var_dump($a1 xor $b0); ?></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td><?php var_dump(!$a1); ?></td>
+                <td><?php var_dump($a1 || $b1); ?></td>
+                <td><?php var_dump($a1 && $b1); ?></td>
+                <td><?php var_dump($a1 xor $b1); ?></td>
+            </tr>
             </tbody>
         </table>
         <table>
@@ -118,211 +104,211 @@
                 <th>"php"</th>
             </thead>
             <tbody>
-                <tr>
-                    <th>true</th>
-                    <td><?php var_dump(true == true); ?></th>
-                    <td><?php var_dump(true == false); ?></td>
-                    <td><?php var_dump(true == 1); ?></td>
-                    <td><?php var_dump(true == 0); ?></td>
-                    <td><?php var_dump(true == -1); ?></td>
-                    <td><?php var_dump(true == '1'); ?></td>
-                    <td><?php var_dump(true == null); ?></td>
-                    <td><?php var_dump(true == 'php'); ?></td>
-                </tr>
-                <tr>
-                    <th>false</th>
-                    <td><?php var_dump(false == true); ?></td>
-                    <td><?php var_dump(false == false); ?></td>
-                    <td><?php var_dump(false == 1); ?></td>
-                    <td><?php var_dump(false == 0); ?></td>
-                    <td><?php var_dump(false == -1); ?></td>
-                    <td><?php var_dump(false == '1'); ?></td>
-                    <td><?php var_dump(false == null); ?></td>
-                    <td><?php var_dump(false == 'php'); ?></td>
-                    <tr>
-                    <th>false</th>
-                    <td><?php var_dump(false == true); ?></td>
-                    <td><?php var_dump(false == false); ?></td>
-                    <td><?php var_dump(false == 1); ?></td>
-                    <td><?php var_dump(false == 0); ?></td>
-                    <td><?php var_dump(false == -1); ?></td>
-                    <td><?php var_dump(false == '1'); ?></td>
-                    <td><?php var_dump(false == null); ?></td>
-                    <td><?php var_dump(false == 'php'); ?></td>
-                </tr>
-                <tr>
-                    <th>1</th>
-                    <td><?php var_dump(1 == true); ?></td>
-                    <td><?php var_dump(1 == false); ?></td>
-                    <td><?php var_dump(1 == 1); ?></td>
-                    <td><?php var_dump(1 == 0); ?></td>
-                    <td><?php var_dump(1 == -1); ?></td>
-                    <td><?php var_dump(1 == '1'); ?></td>
-                    <td><?php var_dump(1 == null); ?></td>
-                    <td><?php var_dump(1 == 'php'); ?></td>
-                </tr>
-                <tr>
-                    <th>0</th>
-                    <td><?php var_dump(0 == true); ?></td>
-                    <td><?php var_dump(0 == false); ?></td>
-                    <td><?php var_dump(0 == 1); ?></td>
-                    <td><?php var_dump(0 == 0); ?></td>
-                    <td><?php var_dump(0 == -1); ?></td>
-                    <td><?php var_dump(0 == '1'); ?></td>
-                    <td><?php var_dump(0 == null); ?></td>
-                    <td><?php var_dump(0 == 'php'); ?></td>
-                </tr>
-                <tr>
-                    <th>-1</th>
-                    <td><?php var_dump(-1 == true); ?></td>
-                    <td><?php var_dump(-1 == false); ?></td>
-                    <td><?php var_dump(-1 == 1); ?></td>
-                    <td><?php var_dump(-1 == 0); ?></td>
-                    <td><?php var_dump(-1 == -1); ?></td>
-                    <td><?php var_dump(-1 == '1'); ?></td>
-                    <td><?php var_dump(-1 == null); ?></td>
-                    <td><?php var_dump(-1 == 'php'); ?></td>
-                </tr>
-                <tr>
-                    <th>"1"</th>
-                    <td><?php var_dump('1' == true); ?></td>
-                    <td><?php var_dump('1' == false); ?></td>
-                    <td><?php var_dump('1' == 1); ?></td>
-                    <td><?php var_dump('1' == 0); ?></td>
-                    <td><?php var_dump('1' == -1); ?></td>
-                    <td><?php var_dump('1' == '1'); ?></td>
-                    <td><?php var_dump('1' == null); ?></td>
-                    <td><?php var_dump('1' == 'php'); ?></td>
-                </tr>
-                <tr>
-                    <th>null</th>
-                    <td><?php var_dump(null == true); ?></td>
-                    <td><?php var_dump(null == false); ?></td>
-                    <td><?php var_dump(null == 1); ?></td>
-                    <td><?php var_dump(null == 0); ?></td>
-                    <td><?php var_dump(null == -1); ?></td>
-                    <td><?php var_dump(null == '1'); ?></td>
-                    <td><?php var_dump(null == null); ?></td>
-                    <td><?php var_dump(null == 'php'); ?></td>
-                </tr>
-                <tr>
-                    <th>"php"</th>
-                    <td><?php var_dump('php' == true); ?></td>
-                    <td><?php var_dump('php' == false); ?></td>
-                    <td><?php var_dump('php' == 1); ?></td>
-                    <td><?php var_dump('php' == 0); ?></td>
-                    <td><?php var_dump('php' == -1); ?></td>
-                    <td><?php var_dump('php' == '1'); ?></td>
-                    <td><?php var_dump('php' == null); ?></td>
-                    <td><?php var_dump('php' == 'php'); ?></td>
-                </tr>
-                </tbody>
+            <tr>
+                <th>true</th>
+                <td><?php var_dump(true == true); ?></th>
+                <td><?php var_dump(true == false); ?></td>
+                <td><?php var_dump(true == 1); ?></td>
+                <td><?php var_dump(true == 0); ?></td>
+                <td><?php var_dump(true == -1); ?></td>
+                <td><?php var_dump(true == '1'); ?></td>
+                <td><?php var_dump(true == null); ?></td>
+                <td><?php var_dump(true == 'php'); ?></td>
+            </tr>
+            <tr>
+                <th>false</th>
+                <td><?php var_dump(false == true); ?></td>
+                <td><?php var_dump(false == false); ?></td>
+                <td><?php var_dump(false == 1); ?></td>
+                <td><?php var_dump(false == 0); ?></td>
+                <td><?php var_dump(false == -1); ?></td>
+                <td><?php var_dump(false == '1'); ?></td>
+                <td><?php var_dump(false == null); ?></td>
+                <td><?php var_dump(false == 'php'); ?></td>
+            <tr>
+                <th>false</th>                    
+                <td><?php var_dump(false == true); ?></td>
+                <td><?php var_dump(false == false); ?></td>
+                <td><?php var_dump(false == 1); ?></td>
+                <td><?php var_dump(false == 0); ?></td>
+                <td><?php var_dump(false == -1); ?></td>
+                <td><?php var_dump(false == '1'); ?></td>
+                <td><?php var_dump(false == null); ?></td>
+                <td><?php var_dump(false == 'php'); ?></td>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td><?php var_dump(1 == true); ?></td>
+                <td><?php var_dump(1 == false); ?></td>
+                <td><?php var_dump(1 == 1); ?></td>
+                <td><?php var_dump(1 == 0); ?></td>
+                <td><?php var_dump(1 == -1); ?></td>
+                <td><?php var_dump(1 == '1'); ?></td>
+                <td><?php var_dump(1 == null); ?></td>
+                <td><?php var_dump(1 == 'php'); ?></td>
+            </tr>
+            <tr>
+                <th>0</th>
+                <td><?php var_dump(0 == true); ?></td>
+                <td><?php var_dump(0 == false); ?></td>
+                <td><?php var_dump(0 == 1); ?></td>
+                <td><?php var_dump(0 == 0); ?></td>
+                <td><?php var_dump(0 == -1); ?></td>
+                <td><?php var_dump(0 == '1'); ?></td>
+                <td><?php var_dump(0 == null); ?></td>
+                <td><?php var_dump(0 == 'php'); ?></td>
+            </tr>
+            <tr>
+                <th>-1</th>
+                <td><?php var_dump(-1 == true); ?></td>
+                <td><?php var_dump(-1 == false); ?></td>
+                <td><?php var_dump(-1 == 1); ?></td>
+                <td><?php var_dump(-1 == 0); ?></td>
+                <td><?php var_dump(-1 == -1); ?></td>
+                <td><?php var_dump(-1 == '1'); ?></td>
+                <td><?php var_dump(-1 == null); ?></td>
+                <td><?php var_dump(-1 == 'php'); ?></td>
+            </tr>
+            <tr>
+                <th>"1"</th>
+                <td><?php var_dump('1' == true); ?></td>
+                <td><?php var_dump('1' == false); ?></td>
+                <td><?php var_dump('1' == 1); ?></td>
+                <td><?php var_dump('1' == 0); ?></td>
+                <td><?php var_dump('1' == -1); ?></td>
+                <td><?php var_dump('1' == '1'); ?></td>
+                <td><?php var_dump('1' == null); ?></td>
+                <td><?php var_dump('1' == 'php'); ?></td>
+            </tr>
+            <tr>
+                <th>null</th>
+                <td><?php var_dump(null == true); ?></td>
+                <td><?php var_dump(null == false); ?></td>
+                <td><?php var_dump(null == 1); ?></td>
+                <td><?php var_dump(null == 0); ?></td>
+                <td><?php var_dump(null == -1); ?></td>                   
+                <td><?php var_dump(null == '1'); ?></td>
+                <td><?php var_dump(null == null); ?></td>
+                <td><?php var_dump(null == 'php'); ?></td>
+            </tr>
+            <tr>
+                <th>"php"</th>
+                <td><?php var_dump('php' == true); ?></td>
+                <td><?php var_dump('php' == false); ?></td>
+                <td><?php var_dump('php' == 1); ?></td>
+                <td><?php var_dump('php' == 0); ?></td>
+                <td><?php var_dump('php' == -1); ?></td>
+                <td><?php var_dump('php' == '1'); ?></td>
+                <td><?php var_dump('php' == null); ?></td>
+                <td><?php var_dump('php' == 'php'); ?></td>
+            </tr>
+            </tbody>
         </table>
         <table>
             <caption class="title">Задание 2. Жёсткое сравнение в PHP</caption>
-                <thead>
-                <tr>
-                    <th></th>
-                    <th>true</th>
-                    <th>false</th>
-                    <th>1</th>
-                    <th>0</th>
-                    <th>-1</th>
-                    <th>"1"</th>
-                    <th>null</th>
-                    <th>"php"</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>true</th>
-                    <td><?php var_dump(true === true); ?></th>
-                    <td><?php var_dump(true === false); ?></td>
-                    <td><?php var_dump(true === 1); ?></td>
-                    <td><?php var_dump(true === 0); ?></td>
-                    <td><?php var_dump(true === -1); ?></td>
-                    <td><?php var_dump(true === '1'); ?></td>
-                    <td><?php var_dump(true === null); ?></td>
-                    <td><?php var_dump(true === 'php'); ?></td>
-                </tr>
-                <tr>
-                    <th>false</th>
-                    <td><?php var_dump(false === true); ?></td>
-                    <td><?php var_dump(false === false); ?></td>
-                    <td><?php var_dump(false === 1); ?></td>
-                    <td><?php var_dump(false === 0); ?></td>
-                    <td><?php var_dump(false === -1); ?></td>
-                    <td><?php var_dump(false === '1'); ?></td>
-                    <td><?php var_dump(false === null); ?></td>
-                    <td><?php var_dump(false === 'php'); ?></td>
-                </tr>
-                <tr>
-                    <th>1</th>
-                    <td><?php var_dump(1 === true); ?></td>
-                    <td><?php var_dump(1 === false); ?></td>
-                    <td><?php var_dump(1 === 1); ?></td>
-                    <td><?php var_dump(1 === 0); ?></td>
-                    <td><?php var_dump(1 === -1); ?></td>
-                    <td><?php var_dump(1 === '1'); ?></td>
-                    <td><?php var_dump(1 === null); ?></td>
-                    <td><?php var_dump(1 === 'php'); ?></td>
-                </tr>
-                <tr>
-                    <th>0</th>
-                    <td><?php var_dump(0 === true); ?></td>
-                    <td><?php var_dump(0 === false); ?></td>
-                    <td><?php var_dump(0 === 1); ?></td>
-                    <td><?php var_dump(0 === 0); ?></td>
-                    <td><?php var_dump(0 === -1); ?></td>
-                    <td><?php var_dump(0 === '1'); ?></td>
-                    <td><?php var_dump(0 === null); ?></td>
-                    <td><?php var_dump(0 === 'php'); ?></td>
-                </tr>
-                <tr>
-                    <th>-1</th>
-                    <td><?php var_dump(-1 === true); ?></td>
-                    <td><?php var_dump(-1 === false); ?></td>
-                    <td><?php var_dump(-1 === 1); ?></td>
-                    <td><?php var_dump(-1 === 0); ?></td>
-                    <td><?php var_dump(-1 === -1); ?></td>
-                    <td><?php var_dump(-1 === '1'); ?></td>
-                    <td><?php var_dump(-1 === null); ?></td>
-                    <td><?php var_dump(-1 === 'php'); ?></td>
-                </tr>
-                <tr>
-                    <th>"1"</th>
-                    <td><?php var_dump('1' === true); ?></td>
-                    <td><?php var_dump('1' === false); ?></td>
-                    <td><?php var_dump('1' === 1); ?></td>
-                    <td><?php var_dump('1' === 0); ?></td>
-                    <td><?php var_dump('1' === -1); ?></td>
-                    <td><?php var_dump('1' === '1'); ?></td>
-                    <td><?php var_dump('1' === null); ?></td>
-                    <td><?php var_dump('1' === 'php'); ?></td>
-                </tr>
-                <tr>
-                    <th>null</th>
-                    <td><?php var_dump(null === true); ?></td>
-                    <td><?php var_dump(null === false); ?></td>
-                    <td><?php var_dump(null === 1); ?></td>
-                    <td><?php var_dump(null === 0); ?></td>
-                    <td><?php var_dump(null === -1); ?></td>
-                    <td><?php var_dump(null === '1'); ?></td>
-                    <td><?php var_dump(null === null); ?></td>
-                    <td><?php var_dump(null === 'php'); ?></td>
-                </tr>
-                <tr>
-                    <th>"php"</th>
-                    <td><?php var_dump('php' === true); ?></td>
-                    <td><?php var_dump('php' === false); ?></td>
-                    <td><?php var_dump('php' === 1); ?></td>
-                    <td><?php var_dump('php' === 0); ?></td>
-                    <td><?php var_dump('php' === -1); ?></td>
-                    <td><?php var_dump('php' === '1'); ?></td>
-                    <td><?php var_dump('php' === null); ?></td>
-                    <td><?php var_dump('php' === 'php'); ?></td>
-                </tr>
-                </tbody>
+            <thead>
+            <tr>
+                <th></th>
+                <th>true</th>
+                <th>false</th>
+                <th>1</th>
+                <th>0</th>
+                <th>-1</th>
+                <th>"1"</th>
+                <th>null</th>
+                <th>"php"</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>true</th>
+                <td><?php var_dump(true === true); ?></th>
+                <td><?php var_dump(true === false); ?></td>
+                <td><?php var_dump(true === 1); ?></td>
+                <td><?php var_dump(true === 0); ?></td>
+                <td><?php var_dump(true === -1); ?></td>
+                <td><?php var_dump(true === '1'); ?></td>
+                <td><?php var_dump(true === null); ?></td>
+                <td><?php var_dump(true === 'php'); ?></td>
+            </tr>
+            <tr>
+                <th>false</th>
+                <td><?php var_dump(false === true); ?></td>
+                <td><?php var_dump(false === false); ?></td>
+                <td><?php var_dump(false === 1); ?></td>
+                <td><?php var_dump(false === 0); ?></td>
+                <td><?php var_dump(false === -1); ?></td>
+                <td><?php var_dump(false === '1'); ?></td>
+                <td><?php var_dump(false === null); ?></td>
+                <td><?php var_dump(false === 'php'); ?></td>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td><?php var_dump(1 === true); ?></td>
+                <td><?php var_dump(1 === false); ?></td>
+                <td><?php var_dump(1 === 1); ?></td>
+                <td><?php var_dump(1 === 0); ?></td>
+                <td><?php var_dump(1 === -1); ?></td>
+                <td><?php var_dump(1 === '1'); ?></td>
+                <td><?php var_dump(1 === null); ?></td>
+                <td><?php var_dump(1 === 'php'); ?></td>
+            </tr>
+            <tr>
+                <th>0</th>
+                <td><?php var_dump(0 === true); ?></td>
+                <td><?php var_dump(0 === false); ?></td>
+                <td><?php var_dump(0 === 1); ?></td>
+                <td><?php var_dump(0 === 0); ?></td>
+                <td><?php var_dump(0 === -1); ?></td>
+                <td><?php var_dump(0 === '1'); ?></td>
+                <td><?php var_dump(0 === null); ?></td>
+                <td><?php var_dump(0 === 'php'); ?></td>
+            </tr>
+            <tr>
+                <th>-1</th>
+                <td><?php var_dump(-1 === true); ?></td>
+                <td><?php var_dump(-1 === false); ?></td>
+                <td><?php var_dump(-1 === 1); ?></td>
+                <td><?php var_dump(-1 === 0); ?></td>
+                <td><?php var_dump(-1 === -1); ?></td>
+                <td><?php var_dump(-1 === '1'); ?></td>
+                <td><?php var_dump(-1 === null); ?></td>
+                <td><?php var_dump(-1 === 'php'); ?></td>
+            </tr>
+            <tr>
+                <th>"1"</th>
+                <td><?php var_dump('1' === true); ?></td>
+                <td><?php var_dump('1' === false); ?></td>
+                <td><?php var_dump('1' === 1); ?></td>
+                <td><?php var_dump('1' === 0); ?></td>
+                <td><?php var_dump('1' === -1); ?></td>
+                <td><?php var_dump('1' === '1'); ?></td>
+                <td><?php var_dump('1' === null); ?></td>
+                <td><?php var_dump('1' === 'php'); ?></td>
+            </tr>
+            <tr>
+                <th>null</th>
+                <td><?php var_dump(null === true); ?></td>
+                <td><?php var_dump(null === false); ?></td>
+                <td><?php var_dump(null === 1); ?></td>
+                <td><?php var_dump(null === 0); ?></td>
+                <td><?php var_dump(null === -1); ?></td>
+                <td><?php var_dump(null === '1'); ?></td>
+                <td><?php var_dump(null === null); ?></td>
+                <td><?php var_dump(null === 'php'); ?></td>
+            </tr>
+            <tr>
+                <th>"php"</th>
+                <td><?php var_dump('php' === true); ?></td>
+                <td><?php var_dump('php' === false); ?></td>
+                <td><?php var_dump('php' === 1); ?></td>
+                <td><?php var_dump('php' === 0); ?></td>
+                <td><?php var_dump('php' === -1); ?></td>
+                <td><?php var_dump('php' === '1'); ?></td>
+                <td><?php var_dump('php' === null); ?></td>
+                <td><?php var_dump('php' === 'php'); ?></td>
+            </tr>
+            </tbody>
          </table>
     </div>
 </body>
